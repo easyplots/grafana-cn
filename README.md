@@ -7,6 +7,7 @@
 1、首先在服务器安装grafana
 参照官网文档：https://grafana.com/grafana/download
 2、克隆本项目，将public目录复制到/usr/share/grafana里面
+### 部分页面示例
 
 ![grafana](http://www.lkp.so/usr/uploads/2019/05/1630632225.png)
 
