@@ -1,0 +1,73 @@
+<div class="editor-row">
+	<div class="section gf-form-group">
+		<h5 class="section-heading">选项</h5>
+		<gf-form-switch class="gf-form"
+			label="展示" label-class="width-7"
+			checked="ctrl.panel.legend.show" on-change="ctrl.render()">
+		</gf-form-switch>
+		<gf-form-switch class="gf-form"
+			label="作为表格" label-class="width-7"
+			checked="ctrl.panel.legend.alignAsTable" on-change="ctrl.render()">
+		</gf-form-switch>
+		<gf-form-switch class="gf-form"
+			label="在右边" label-class="width-7"
+			checked="ctrl.panel.legend.rightSide" on-change="ctrl.render()">
+		</gf-form-switch>
+		<div ng-if="ctrl.panel.legend.rightSide" class="gf-form">
+			<label class="gf-form-label width-7">Width</label>
+			<input type="number" class="gf-form-input max-width-5" placeholder="250" bs-tooltip="'Set a min-width for the legend side table/block'" data-placement="right" ng-model="ctrl.panel.legend.sideWidth" ng-change="ctrl.render()" ng-model-onblur>
+		</div>
+	</div>
+
+	<div class="section gf-form-group">
+		<h5 class="section-heading">值</h5>
+
+		<div class="gf-form-inline">
+			<gf-form-switch class="gf-form"
+				label="最小" label-class="width-4"
+				checked="ctrl.panel.legend.min" on-change="ctrl.legendValuesOptionChanged()">
+			</gf-form-switch>
+
+			<gf-form-switch class="gf-form max-width-12"
+				label="最大" label-class="width-6" switch-class="max-width-5"
+				checked="ctrl.panel.legend.max" on-change="ctrl.legendValuesOptionChanged()">
+			</gf-form-switch>
+		</div>
+
+		<div class="gf-form-inline">
+			<gf-form-switch class="gf-form"
+				label="平均" label-class="width-4"
+				checked="ctrl.panel.legend.avg" on-change="ctrl.legendValuesOptionChanged()">
+			</gf-form-switch>
+
+			<gf-form-switch class="gf-form max-width-12"
+				label="当前" label-class="width-6" switch-class="max-width-5"
+				checked="ctrl.panel.legend.current" on-change="ctrl.legendValuesOptionChanged()">
+			</gf-form-switch>
+		</div>
+
+		<div class="gf-form-inline">
+			<gf-form-switch class="gf-form"
+				label="合计" label-class="width-4"
+				checked="ctrl.panel.legend.total" on-change="ctrl.legendValuesOptionChanged()">
+			</gf-form-switch>
+
+			<div class="gf-form">
+				<label class="gf-form-label width-6">小数</label>
+				<input type="number" class="gf-form-input width-5" placeholder="自动" bs-tooltip="'Override automatic decimal precision for legend and tooltips'" data-placement="right" ng-model="ctrl.panel.decimals" ng-change="ctrl.render()" ng-model-onblur>
+			</div>
+		</div>
+	</div>
+
+	<div class="section gf-form-group">
+		<h5 class="section-heading">隐藏字段</h5>
+		<gf-form-switch class="gf-form"
+			label="仅空值" label-class="width-10"
+			checked="ctrl.panel.legend.hideEmpty" on-change="ctrl.render()">
+		</gf-form-switch>
+		<gf-form-switch class="gf-form"
+			label="仅0" label-class="width-10"
+			checked="ctrl.panel.legend.hideZero" on-change="ctrl.render()">
+		</gf-form-switch>
+	</div>
+</div>
