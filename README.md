@@ -8,4 +8,6 @@
 参照官网文档：https://grafana.com/grafana/download
 2、克隆本项目，将public目录复制到/usr/share/grafana里面
 
+![grafana](http://www.lkp.so/usr/uploads/2019/05/1630632225.png)
 
+![grafana2](http://www.lkp.so/usr/uploads/2019/05/3034165355.png)
